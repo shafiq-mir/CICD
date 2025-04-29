@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from netmiko import ConnectHandler
+
+
 
 connection_to_router = ConnectHandler(
                       device_type="cisco_ios",
@@ -14,7 +18,8 @@ connection_to_router = ConnectHandler(
 
 
 
-#--------------------------Create ACCESS-list CONFIGURATION--------------------------
+#--------------------------Create ACCESS-list CONFIGURATION--------------------
+
 # cfg_list = [
 #     "ip access-list extended TEST1",
 #     "permit ip any host 1.1.1.1",
@@ -35,9 +40,9 @@ connection_to_router = ConnectHandler(
 # ]
 
 # ospf_cfg_output = connection_to_router.send_config_set(ospf_cfg)
-#print(ospf_cfg_output)
+# print(ospf_cfg_output)
 
-# --------------------------------Enable EIGRP------------------------------------------------------------
+# --------------------------------Enable EIGRP---
 
 
 # eigrp_cfg = [
@@ -51,10 +56,10 @@ connection_to_router = ConnectHandler(
 
 
 # output = connection_to_router.send_command(
-#     "show ip protocols "
-# )    
+# "show ip protocols "
+# )
 
-# ----------------------------------------Correct Ways to Send Multiple show Commands:------------------------------------
+# ----------------------------------------Correct Ways to Send Multiple show Commands:
 
 # 1 way
 
@@ -65,23 +70,23 @@ connection_to_router = ConnectHandler(
 # print(output1)
 # print(output2)
 # print(output3)
+# ------Using a Loop for Multiple Commands
 
 
 
-
-# ------------------------------------------Using a Loop for Multiple Commands -------------------------------------------
 
 # 2nd way
 
 # commands = ["show ip protocols", "show ip route eigrp", "show ip interface brief"]
 # for command in commands:
-#     output = connection_to_router.send_command(command)
-#     print(f"Output of '{command}':\n{output}\n")
+# output = connection_to_router.send_command(command)
+# print(f"Output of '{command}':\n{output}\n")
 
 
-# ------------------------------------------Using a List of Commands with send_config_set ----------------------------------
+# --------------------Using a List of Commands with send_config_set -
 
-# ------------------------------------------------------------Using send_multiline-If available in your Netmiko version, this allows batch execution:
+# Using send_multiline-If available in your Netmiko version, this allows batch execution:
+
 
 # 3rd way
 
