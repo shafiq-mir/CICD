@@ -86,8 +86,8 @@ connection_to_router = ConnectHandler(
 # 3rd way
 
 
-#output1 = connection_to_router.send_command_timing("show ip protocols")
-#output2 = connection_to_router.send_command_timing("show ip route eigrp")
+# output1 = connection_to_router.send_command_timing("show ip protocols")
+# output2 = connection_to_router.send_command_timing("show ip route eigrp")
 output3 = connection_to_router.send_command_timing("show ip interface brief")
 
 print(output3)
@@ -99,8 +99,8 @@ print(output3)
 
 
 
-#print(output)
-#connection_to_router.disconnect()
+# print(output)
+# connection_to_router.disconnect()
 # connection_to_router.save_config()
 # connection_to_router.disconnect()
 # print("Configuration saved and connection closed.")
