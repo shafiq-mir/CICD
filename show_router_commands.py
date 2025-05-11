@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 
+# from netmiko import ConnectHandler
+import sys
+sys.path.append("/home/shafiq/automation/lib/python3.12/site-packages")
+import netmiko
 from netmiko import ConnectHandler
+
 
 
 
 connection_to_router = ConnectHandler(
                       device_type="cisco_ios",
-                      host="10.0.0.80",
+                      host="10.0.0.81",
                       username="shafiq",
                       password="cisco",
 )
