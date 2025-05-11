@@ -11,7 +11,7 @@ from netmiko import ConnectHandler
 
 connection_to_router = ConnectHandler(
                       device_type="cisco_ios",
-                      host="10.0.0.81",
+                      host="10.0.0.80",
                       username="shafiq",
                       password="cisco",
 )
